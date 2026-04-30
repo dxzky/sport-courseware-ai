@@ -1,6 +1,6 @@
-# QClaw Courseware AI
+# OpenClaw Courseware AI
 
-面向高校课程资源更新的 QClaw / OpenClaw 工作区模板。项目用于自动化更新教案、PPT 和学生讲义，适配以下课程：
+面向高校课程资源更新的 OpenClaw 工作区模板。项目用于自动化更新教案、PPT 和学生讲义，适配以下课程：
 
 - 《电路与电子技术基础》
 - 《人体生理信号采集与分析》
@@ -43,10 +43,10 @@ PPT 蓝图 slide_blueprint.json
 
 ```text
 qclaw-courseware-ai/
-  AGENTS.md                         # QClaw 总控规则
+  AGENTS.md                         # OpenClaw 总控规则
   openclaw.json.example             # 国内模型配置示例
-  prompts/                          # 可直接复制给 QClaw 的提示词
-  skills/                           # QClaw / OpenClaw workspace skills
+  prompts/                          # 可直接复制给 OpenClaw 的提示词
+  skills/                           # OpenClaw workspace skills
   schemas/                          # source_cards / slide_blueprint 等 JSON Schema
   scripts/                          # 可选辅助脚本
   docs/                             # 新手说明、模型策略、多龙虾流程、PPT 可编辑规范
@@ -105,7 +105,7 @@ templates/PPT模板.pptx
 templates/讲义模板.docx
 ```
 
-### 3. 在 QClaw 中运行第一条指令
+### 3. 在 OpenClaw 中运行第一条指令
 
 先不要一次处理三门课。建议从一门课的一讲开始：
 
@@ -173,7 +173,7 @@ python scripts/generate_pptx_from_blueprint.py \
   --output output/sample_presentation.pptx
 ```
 
-说明：`generate_pptx_from_blueprint.py` 是基础脚本，重点演示“可编辑文本、表格、流程形状”的生成方式。正式课程 PPT 仍建议由 QClaw 使用模板和 `pptx-course-builder` skill 生成。
+说明：`generate_pptx_from_blueprint.py` 是基础脚本，重点演示“可编辑文本、表格、流程形状”的生成方式。正式课程 PPT 仍建议由 OpenClawClaw 使用模板和 `pptx-course-builder` skill 生成。
 
 ## 适合的 GitHub 使用方式
 
