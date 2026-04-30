@@ -1,0 +1,21 @@
+{
+  "pass": false,
+  "critical_issues": [],
+  "major_issues": [
+    {
+      "file": "ppt/slide_blueprint.json",
+      "slide_no": 2,
+      "issue": "图示中的“理想元件”概念需要明确来源。",
+      "fix": "在 source_ids 中保留 SRC-CIR-001，并在 speaker_notes 中说明来源。"
+    }
+  ],
+  "minor_issues": [
+    "第1页标题可补充授课对象。"
+  ],
+  "fix_instructions": [
+    "修复第2页 speaker_notes 中的来源说明。"
+  ],
+  "citation_coverage": "约 85%",
+  "recommended_model_for_fix": "standard",
+  "final_comment": "修复 major issue 后可重新审查。"
+}

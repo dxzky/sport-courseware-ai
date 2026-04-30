@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lesson Blueprint",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "lesson_no",
+      "title",
+      "hours",
+      "objectives",
+      "key_points",
+      "difficult_points",
+      "source_ids"
+    ],
+    "properties": {
+      "lesson_no": {
+        "type": "integer"
+      },
+      "title": {
+        "type": "string"
+      },
+      "hours": {
+        "type": "number"
+      },
+      "objectives": {
+        "type": "object"
+      },
+      "key_points": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "difficult_points": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "activities": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "assessment": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "source_ids": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "additionalProperties": true
+  }
+}

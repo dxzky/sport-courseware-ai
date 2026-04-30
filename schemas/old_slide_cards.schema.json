@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Old Slide Cards",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "old_slide_no",
+      "title",
+      "visible_text",
+      "decision",
+      "reason"
+    ],
+    "properties": {
+      "old_slide_no": {
+        "type": "integer"
+      },
+      "title": {
+        "type": "string"
+      },
+      "visible_text": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "figures": {
+        "type": "array"
+      },
+      "speaker_notes": {
+        "type": "string"
+      },
+      "source_ids": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "decision": {
+        "type": "string",
+        "enum": [
+          "keep",
+          "rewrite",
+          "delete",
+          "merge"
+        ]
+      },
+      "reason": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": true
+  }
+}

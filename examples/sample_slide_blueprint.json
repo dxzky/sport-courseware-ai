@@ -1,0 +1,92 @@
+[
+  {
+    "slide_no": 1,
+    "section": "导入",
+    "layout_type": "title",
+    "title": "电路与电子技术基础：第1讲",
+    "core_message": "本讲建立课程整体认识并引入电路模型的基本概念。",
+    "visible_content": {
+      "bullets": [
+        "课程定位",
+        "学习目标",
+        "电路模型的意义"
+      ],
+      "table": null,
+      "diagram": null,
+      "chart": null
+    },
+    "visual_design": {
+      "recommended_layout": "标题居中 + 三个关键词",
+      "editable_elements": [
+        "文本框"
+      ],
+      "avoid": [
+        "整页图片"
+      ]
+    },
+    "speaker_notes": "先说明课程与后续电子系统、测量实验之间的关系，再引出电路模型。",
+    "source_ids": [
+      "SRC-CIR-001"
+    ],
+    "update_instruction": "new",
+    "revision_notes": "新增课程导入页。"
+  },
+  {
+    "slide_no": 2,
+    "section": "核心概念",
+    "layout_type": "process",
+    "title": "从实际电路到电路模型",
+    "core_message": "电路模型是对实际器件和连接关系的工程抽象。",
+    "visible_content": {
+      "bullets": [
+        "实际器件具有复杂物理特性",
+        "模型保留分析所需的主要关系",
+        "模型选择取决于分析目标"
+      ],
+      "table": null,
+      "diagram": {
+        "type": "process",
+        "nodes": [
+          "实际器件",
+          "理想元件",
+          "电路模型",
+          "分析与设计"
+        ],
+        "edges": [
+          [
+            "实际器件",
+            "理想元件"
+          ],
+          [
+            "理想元件",
+            "电路模型"
+          ],
+          [
+            "电路模型",
+            "分析与设计"
+          ]
+        ]
+      },
+      "chart": null
+    },
+    "visual_design": {
+      "recommended_layout": "左侧要点 + 右侧流程图",
+      "editable_elements": [
+        "文本框",
+        "形状",
+        "箭头"
+      ],
+      "avoid": [
+        "大段文字",
+        "不可编辑流程图"
+      ]
+    },
+    "speaker_notes": "强调模型不是实际电路的完整复制，而是服务于计算、分析和设计。",
+    "source_ids": [
+      "SRC-CIR-001",
+      "SRC-CIR-002"
+    ],
+    "update_instruction": "rewrite",
+    "revision_notes": "将旧PPT中的文字页改为流程图。"
+  }
+]

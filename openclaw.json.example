@@ -1,0 +1,57 @@
+{
+  "project": "qclaw-courseware-ai",
+  "note": "这是示例配置。请根据你的 QClaw/OpenClaw 版本调整字段名称。目标是只启用国内模型。",
+  "model_policy": {
+    "allow_only_domestic_models": true,
+    "blocked_providers": [
+      "openai",
+      "anthropic",
+      "google",
+      "openrouter",
+      "perplexity",
+      "mistral",
+      "together",
+      "groq"
+    ],
+    "allowed_providers": [
+      "qwen",
+      "deepseek",
+      "zai",
+      "glm",
+      "moonshot",
+      "kimi",
+      "doubao",
+      "volcengine",
+      "tencent-cloud",
+      "qianfan",
+      "minimax"
+    ]
+  },
+  "model_routes": {
+    "cheap_json": {
+      "provider": "qwen",
+      "model": "qwen-plus-or-flash-cn",
+      "thinking": "low",
+      "use_for": ["file_classification", "json_extraction", "source_card_draft"]
+    },
+    "long_context": {
+      "provider": "kimi-or-qwen-or-deepseek",
+      "model": "domestic-long-context-model",
+      "thinking": "low",
+      "use_for": ["long_pdf", "large_ppt", "multi_chapter_merge"]
+    },
+    "high_quality": {
+      "provider": "qwen-or-deepseek-or-kimi-or-glm",
+      "model": "domestic-high-quality-model",
+      "thinking": "medium",
+      "use_for": ["final_lesson_plan", "final_handout", "ppt_speaker_notes", "major_fix"]
+    }
+  },
+  "skills_path": "./skills",
+  "workspace": ".",
+  "output_policy": {
+    "never_overwrite_input": true,
+    "final_output_dir": "output",
+    "require_citation_audit": true
+  }
+}

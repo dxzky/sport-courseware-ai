@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Course Source Card",
+  "type": "object",
+  "required": [
+    "source_id",
+    "course",
+    "source_type",
+    "title",
+    "url_or_path",
+    "usable_claims"
+  ],
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "course": {
+      "type": "string"
+    },
+    "source_type": {
+      "type": "string",
+      "enum": [
+        "textbook",
+        "standard",
+        "paper",
+        "web",
+        "old_courseware",
+        "datasheet",
+        "syllabus",
+        "teacher_note",
+        "other"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "author_or_org": {
+      "type": "string"
+    },
+    "publisher_or_site": {
+      "type": "string"
+    },
+    "year_or_date": {
+      "type": "string"
+    },
+    "url_or_path": {
+      "type": "string"
+    },
+    "access_date": {
+      "type": "string"
+    },
+    "page_or_section": {
+      "type": "string"
+    },
+    "usable_claims": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risk_notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

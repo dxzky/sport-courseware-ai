@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Citation Audit Report",
+  "type": "object",
+  "required": [
+    "pass",
+    "critical_issues",
+    "major_issues",
+    "minor_issues",
+    "fix_instructions",
+    "citation_coverage",
+    "final_comment"
+  ],
+  "properties": {
+    "pass": {
+      "type": "boolean"
+    },
+    "critical_issues": {
+      "type": "array"
+    },
+    "major_issues": {
+      "type": "array"
+    },
+    "minor_issues": {
+      "type": "array"
+    },
+    "fix_instructions": {
+      "type": "array"
+    },
+    "citation_coverage": {
+      "type": "string"
+    },
+    "recommended_model_for_fix": {
+      "type": "string"
+    },
+    "final_comment": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

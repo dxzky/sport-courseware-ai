@@ -1,0 +1,104 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Slide Blueprint",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": [
+      "slide_no",
+      "layout_type",
+      "title",
+      "core_message",
+      "visible_content",
+      "speaker_notes",
+      "source_ids",
+      "update_instruction"
+    ],
+    "properties": {
+      "slide_no": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "section": {
+        "type": "string"
+      },
+      "layout_type": {
+        "type": "string",
+        "enum": [
+          "title",
+          "section",
+          "content",
+          "comparison",
+          "process",
+          "diagram",
+          "case",
+          "exercise",
+          "summary",
+          "references"
+        ]
+      },
+      "title": {
+        "type": "string"
+      },
+      "core_message": {
+        "type": "string"
+      },
+      "visible_content": {
+        "type": "object",
+        "properties": {
+          "bullets": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "table": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "diagram": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "chart": {
+            "type": [
+              "object",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      },
+      "visual_design": {
+        "type": "object"
+      },
+      "speaker_notes": {
+        "type": "string"
+      },
+      "source_ids": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "update_instruction": {
+        "type": "string",
+        "enum": [
+          "keep",
+          "rewrite",
+          "new",
+          "delete",
+          "merge"
+        ]
+      },
+      "revision_notes": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": true
+  }
+}
